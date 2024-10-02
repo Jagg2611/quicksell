@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="nav-btn">Display</button>
+      <div class="dropdown">
+        <button class="dropbtn">Group By</button>
+        <div class="dropdown-content">
+          <a href="#" id="groupByStatus">Status</a>
+          <a href="#" id="groupByUser">User</a>
+          <a href="#" id="groupByPriority">Priority</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Sort By</button>
+        <div class="dropdown-content">
+          <a href="#" id="sortByPriority">Priority</a>
+          <a href="#" id="sortByTitle">Title</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Include your Kanban board content here -->
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.dropdown {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.dropdown h3 {
+  margin: 0 0 10px;
+}
+
+.dropdown button {
+  display: block;
+  margin: 5px 0;
+}

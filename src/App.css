@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background for the app */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar Styles (Header Section) */
+.navbar {
+  background-color: #fff; /* Pure white background for the entire header */
+  color: #333; /* Dark text color for contrast */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-left {
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Button Styles */
+.nav-btn {
+  background-color: white; /* Default button background */
+  color: black; /* Default button text color */
+  border: 1px solid black; /* Button border */
+  padding: 8px 12px; /* Button padding */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.nav-btn:hover {
+  background-color: black; /* Change background to black on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+.nav-btn.active {
+  background-color: black; /* Active state background */
+  color: white; /* Active state text color */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: absolute; /* Positioning for dropdown */
+  background-color: white; /* Background color for the dropdown */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  z-index: 1000; /* Ensures the dropdown appears above other content */
+  padding: 10px; /* Add padding inside the dropdown */
+  width: 200px; /* Set a fixed width for the dropdown box */
+}
+
+/* Dropdown Section Styling */
+.dropdown-section {
+  margin-bottom: 5px; /* Space between dropdowns */
+  display: flex;
+  align-items: center;
+}
+
+/* Label (Heading) Styling */
+.dropdown-section label {
+  font-size: 11px; /* Smaller font for labels */
+  color: #666; /* Grey color for labels */
+  margin-right: 60px; /* Space between label and dropdown */
+}
+
+/* Dropdown Styling */
+.dropdown-section select {
+  width: auto; /* Automatic width for dropdown */
+  padding: 2px; /* Spacing within the dropdown */
+  font-size: 11px; /* Font size for the dropdown */
+  border: 1px solid #ccc; /* Border for the dropdown */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Specific Layout for Grouping and Ordering */
+.dropdown-group {
+  display: flex;
+  flex-direction: column; /* Layout items vertically */
+}
+
+/* Kanban Board Styles */
+.kanban-board {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.kanban-column {
+  padding: 10px; /* Padding for content */
+  width: 300px;
+}
+
+/* Column Heading (Group Heading) Styles */
+h3 {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust margin if necessary */
+  color: black; /* Main heading color */
+}
+
+/* Align headings consistently */
+.heading-left,
+.ticket-footer {
+  display: flex;
+  align-items: center;
+}
+
+.heading-left img,
+.ticket-footer img {
+  width: 12px; /* Adjusted image width */
+  height: 12px; /* Adjusted image height */
+  margin-right: 5px;
+  vertical-align: middle; /* Ensures alignment with text */
+}
+
+.heading-right img {
+  margin-left: 5px;
+}
+
+/* Kanban Card Styles */
+.kanban-card {
+  background-color: white; /* Pure white background for cards */
+  padding: 8px; /* Reduced padding for a compact look */
+  margin: 8px 0; /* Reduced margin */
   display: flex;
   flex-direction: column;
+  height: auto; /* Allow flexibility */
+  border: none; /* Removed border */
+  border-radius: 4px; /* Added slight border radius */
+}
+
+/* Ticket Header Styles */
+.ticket-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ticket-header img {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* CAM ID Styles */
+.cam-id {
+  font-size: 8px;
+  color: #666; /* Grey color for CAM ID */
+}
+
+/* Ticket Title (Card Heading) Styles */
+h4.ticket-title {
+  font-size: 8px; /* Adjust heading size if needed */
+  margin: 0;
+  display: -webkit-box; /* Enable box model */
+  -webkit-box-orient: vertical; /* Orient box vertically */
+  overflow: hidden; /* Hide overflow */
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  text-overflow: ellipsis; /* Add ellipsis */
+}
+
+/* Footer Line for Image and Label (Feature Request, Priority, etc.) */
+.ticket-footer {
+  display: flex;
+  align-items: center; /* Ensures icons and text are vertically centered */
+  margin-top: 8px; /* Add spacing if needed */
+}
+
+.ticket-footer img {
+  width: 8px; /* This size change only applies to the footer image */
+  height: 8px;
+  margin-right: 5px;
+  padding: 4px; /* Keep padding for spacing */
+  border: 1px solid #d3d3d3; /* Light grey border */
+  border-radius: 4px; /* Rounded corners to match the light grey theme */
+  background-color: #f9f9f9; /* Optional: Add a background color to the box */
+}
+
+/* Group by Priority Specific Styles */
+.ticket-footer.group-by-priority {
+  padding-left: 0; /* Remove left padding */
+  margin-top: 6px; /* Maintain the margin at the top */
+  display: flex; /* Ensure it is a flex container */
+}
+
+.ticket-footer.group-by-priority img {
+  display: none; /* Hide the icon for this specific case */
+}
+
+/* Update font size for the 'Feature Request' label */
+.ticket-footer span {
+  font-size: 7px; /* Same as ticket title size */
+  color: #666; /* Grey color for the label */
+  padding: 4px; /* Keep padding for spacing */
+  border: 1px solid #d3d3d3; /* Light grey border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fff; /* Light background color similar to the image */
+  margin-left: 5px; /* Add space between the image and the label */
+  display: inline-block; /* Ensure it's treated like a box element */
+}
+
+/* Style for the Kanban card user icon (smaller size) */
+.user-icon {
+  position: absolute;  /* Position the icon absolutely within the card */
+  top: 8px;            /* Align the icon 8px from the top */
+  right: 8px;          /* Align the icon 8px from the right */
+  color: #fff;         /* White color for the icon */
+  background-color: #000;  /* Blue background for the circle */
+  border-radius: 50%;  /* Make it circular */
+  padding: 4px;        /* Reduce padding to make it smaller */
+  font-size: 8px;      /* Set a smaller font size */
+  z-index: 10;         /* Ensure it's layered on top of other card content */
+}
+
+/* Ensure the Kanban card has a relative position so that the icon is placed correctly */
+.kanban-card {
+  position: relative;  /* Make the card a positioned container for absolutely positioned elements */
+  background-color: white; /* Pure white background for cards */
+  padding: 8px; /* Reduced padding for a compact look */
+  margin: 8px 0; /* Reduced margin */
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Allow flexibility */
+  border: none; /* Removed border */
+  border-radius: 4px; /* Added slight border radius */
+}
+
+/* Additional Style for Group by User */
+h3.group-by-user {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+/* New CSS for user icon beside main heading */
+h3.group-by-user .user-icon {
+  margin-right: 5px; /* Space between the user icon and heading */
+  width: 12px;  /* Ensure the icon size matches other icons */
+  height: 12px; /* Adjust the height for consistency */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .kanban-board {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .kanban-column {
+    width: auto; /* Adjust column width for smaller screens */
   }
 }

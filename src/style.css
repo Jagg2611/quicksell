@@ -1,0 +1,85 @@
+/* Basic Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f4f5f7;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  background-color: #0052cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.nav-btn:hover {
+  background-color: #003b99;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #0052cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.dropbtn:hover {
+  background-color: #003b99;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Make sure the navbar stays on top */
+body {
+  margin-top: 60px;
+}
